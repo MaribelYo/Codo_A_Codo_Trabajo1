@@ -114,3 +114,25 @@ nav ul li ul li a{
         justify-content: flex-end;
     }
 }
+#login-section .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+#login-section .card-header {
+    background-color: #2ab1ce; /* Usando el mismo color que en los enlaces hover */
+}
+
+#login-section .form-control {
+    border-radius: 0;
+}
+
+#login-section .btn-primary {
+    background-color: #2ab1ce;
+    border-color: #2ab1ce;
+}
+
+#login-section .btn-primary:hover {
+    background-color: #1f8fa1;
+    border-color: #1f8fa1;
+}
