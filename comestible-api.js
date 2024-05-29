@@ -1,4 +1,4 @@
-const URL = 'https://mushroomobserver.org/api2/<database_table>';
+const URL = 'https://es.wikipedia.org/w/api.php';
 const SEARCH_PARAMS = {
     action: 'query',
     list: 'search',
