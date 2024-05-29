@@ -5,8 +5,6 @@ document
 		let correo = document.getElementById("email").value.trim();
 		let contrasenia = document.getElementById("password").value;
 
-		//mostrar el objeto json
-
 		let usuarioRecuperado = JSON.parse(localStorage.getItem(correo));
 		
 		if ( usuarioRecuperado=== null) {
@@ -16,12 +14,14 @@ document
 		else if (usuarioRecuperado.password !== contrasenia) {
 			alert("Contraseña incorrecta.");
 			event.preventDefault();
-		} 
-		else {
+		} else {
+			window.location.href="./index.html"
 			alert("Bienvenido "+usuarioRecuperado.nombre);
+			localStorage.removeItem("signin");
+			localStorage.setItem('signin', usuarioRecuperado.nombre);		
 
-			
 
-	}		
-		
-	});
+		     }
+	}
+
+		);

@@ -2,7 +2,7 @@ const URL = 'https://es.wikipedia.org/w/api.php';
 const SEARCH_PARAMS = {
     action: 'query',
     list: 'search',
-    srsearch: 'hongos comestibles',
+    srsearch: 'hongos toxicos',
     srlimit: 50,
     format: 'json',
     origin: '*'
@@ -78,7 +78,7 @@ async function mostrarResultados(searchResults) {
             cardBody.classList.add('card-body');
 
             const extract = page.extract.length > 100 ? page.extract.substring(0, 100) + '...' : page.extract; // Limitar la descripción a 100 caracteres
-            const bodyContent =  extract;
+            const bodyContent = extract;
             cardBody.innerHTML = `<p class="card-text">${bodyContent}</p>`;
             cardDiv.appendChild(cardBody);
 
