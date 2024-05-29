@@ -25,9 +25,9 @@
           <nav>
               <ul class="nav-list">
                   <li><a href="./index.html">Inicio</a></li>
+                  <li><a href="./iniciar.html">Iniciar Sesion</a></li>
+                  <li><a href="./registro.html">Registrarse</a></li>
                   <li><a href="#footer-contacto">Acerca de</a></li>
-                  <li><a href="./registro.html">Registro</a></li>
-                  <li><a href="https://inscripcionesagencia.bue.edu.ar/codoacodo/">Codo a codo</a></li>
                   <li><a href="./contacto.html">Contacto</a></li>
               </ul>
           </nav>
@@ -79,37 +79,8 @@
   </div>
 </div>
 
-<!-- Iniciar Sesión -->
-<div id="login-section" class="container mt-5">
-  <div class="row justify-content-center">
-      <div class="col-md-6">
-          <div class="card">
-              <div class="card-header bg-primary text-white text-center">
-                  <h4>Iniciar Sesión</h4>
-              </div>
-              <div class="card-body">
-                  <form id="login-form">
-                      <div class="form-group">
-                          <label for="username">Usuario</label>
-                         
-                          <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
+ 
   
-  <!-- Contenido después del inicio de sesión -->
-  <div id="content-after-login" class="container mt-5" style="display: none;">
-    <!-- Coloca aquí el contenido que solo debe mostrarse después del inicio de sesión -->
-  </div>
   
   <footer id="footer-contacto" class="mt-5 text-center">
     <!-- Pie de página aquí -->
@@ -127,15 +98,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-  <script>
-    // JavaScript para controlar el flujo después del inicio de sesión
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita que el formulario se envíe
-      // Aquí debes verificar el inicio de sesión (por ejemplo, con una API)
-      // Si el inicio de sesión es exitoso, muestra el contenido después del inicio de sesión y oculta el formulario
-      document.getElementById('content-after-login').style.display = 'block';
-      document.getElementById('login-section').style.display = 'none';
-    });
-  </script>
+  
   </body>
   </html>
