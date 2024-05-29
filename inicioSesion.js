@@ -1,19 +1,27 @@
 document
 	.getElementById("inicioSesionForm")
 	.addEventListener("submit", function (event) {
+
 		let correo = document.getElementById("email").value.trim();
 		let contrasenia = document.getElementById("password").value;
 
-		// Obtener la contraseña almacenada en localStorage para el correo ingresado
-		let contraseniaAlmacenada = localStorage.getItem(correo);
+		//mostrar el objeto json
 
-		if (contraseniaAlmacenada === null) {
+		let usuarioRecuperado = JSON.parse(localStorage.getItem(correo));
+		
+		if ( usuarioRecuperado=== null) {
 			alert("Correo electrónico no registrado.");
 			event.preventDefault();
-		} else if (contraseniaAlmacenada !== contrasenia) {
+		}
+		else if (usuarioRecuperado.password !== contrasenia) {
 			alert("Contraseña incorrecta.");
 			event.preventDefault();
-		} else {
-			alert("Inicio de sesión exitoso.");
-		}
+		} 
+		else {
+			alert("Bienvenido "+usuarioRecuperado.nombre);
+
+			
+
+	}		
+		
 	});
