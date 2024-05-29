@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo de los Hongos</title>
+  <script src="https://kit.fontawesome.com/34242d1290.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/estilohongos.css">
+</head>
+<body>
+
+  <!--Encabezado con un logo de forma de tierra,nombre, boton ☰ y una lista[Inicio-Acerca de-Codo a codo- Contacto]-->
+  <div class="nav-bar">
+    <div class="nav-container">
+      <div class="brand">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-earth" alt="Logo del sitio Mundo de los Hongos"></i><!--Logo-->
+          <span>Mundo de los Hongos</span><!--Nombre-->
+        </a>
+      </div>          
+      <p> 
+        <!--Boton ☰-->
+        <a id="btncolapse" class="btn btn-light" data-toggle="collapse" href="#listamenu" role="button" aria-expanded="true" aria-controls="collapseExample">☰</a>
+      </p>            
+      <!--Lista del menu-->          
+      <div id="listamenu">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./inicio-sesion.html">Iniciar Sesion</a></li>
+            <li><a href="./registrese.html">Registrarse</a></li>
+            <li><a href="#footer-contacto">Acerca de</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div id="container-home" class="container">
+      <!-- Contenido: tarjetas en filas hasta 3 columnas. 1 columna cuando la ventana se minimiza. -->
+      <div class="row row-cols-1 row-cols-md-5" id="results">
+        <!-- Los resultados de la búsqueda se agregarán aquí -->
+      </div>
+    </div>
+
+    <!-- primer modal -->
+    <!--Se muestra titulo, video, texto, texto en listas-->
+    <!--misma representacion para los otros modales-->
+    <div class="modal fade" id="ModalPortobello" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Portobello</h5>          
+          </div>
+      
+          <div class="modal-body"> 
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8LDZabff8ds?si=HrfpwkLmYRzzfTRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Familia:</h4>
+            <ul>
+              <li>Agaricus</li>
+            </ul>
+            <h4>Formado por:</h4>
+            <ul>
+              <li><b>sombrero</b>: es redondeado y ligeramente aplanado en la parte superior.</li>
+              <li><b>Pie</b>: puede llegar hasta 8 cm de largo y 3 cm de diámetro.</li>
+              <li><b>Laminas</b>: son las típicas de las agaricáceas, no están sujetas al pie y cambian gradualmente de un color rosado a pardo oscuro</li>
+            </ul>
+            <h4>Historia:</h4>
+            <p>Esta variedad, originaria de Pensilvania —donde un granjero la obtuvo mediante una mutación al azar— ha desplazado virtualmente del mercado, debido a su mejor adaptación a la conserva, a la original A. bisporus var brunnescens. Dependiendo del punto de maduración con el que se comercializa, esta última se vende bajo el nombre de portobello</p>
+          </div>
+      
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer-contacto" class="mt-5 text-center">    <!-- Pie de página con texto-->
+    <p>Equipo 15 - Comisión 24109 - Codo A Codo</p>
+    <p>Maximiliano Aguero</p>
+    <p>Franco Olivera</p>
+    <p>Maribel Palacios</p>
+    <p>Ariel Nicosia</p>
+    <p>Tobias Causevic</p>
+    <p>Mauro Andres Ferra</p>
+    <p>Contacto: info@mundo-hongos.com</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./comestible-api.js"></script>
+</body>
+</html>
